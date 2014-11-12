@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+ <struts>
+  <constant name="Struts.devMode" value="true"></constant>
+<package name="Struts1" extends="struts-default">
+<action name="hello" class="Struts1.HelloWorldAction" method="excute">
+<result name="sucess">/WEB-INF/page/hello.jsp</result>
+</action>
+
+<action name="ognl" class="Struts1.OGNLAction" method="excute">
+<result name="success">success.jsp</result>
+</action>
+
+
+
+<action name="login" class="Struts1.LoginAction" method="excute">
+<result name="success">/WEB-INF/page/hello.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+<action name="bb">
+<result name="redirect">/aa.jsp</result>
+</action>
+</package>
+
+
+</struts>
